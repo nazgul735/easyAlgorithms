@@ -2,6 +2,7 @@ def mergeSort(list):
     string="hei"
     #list = [ord(x) - 96 for x in string] 
     if len(list) > 1:
+
         mid = len(list) // 2
         left = list[:mid]
         right = list[mid:]
@@ -21,6 +22,7 @@ def mergeSort(list):
                 list[k] = right[j]
                 j += 1
             k += 1
+             
         while i<len(left):
             list[k] = left[i]
             i += 1
