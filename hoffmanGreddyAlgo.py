@@ -1,3 +1,5 @@
+from distutils.log import error
+
 class node:
     def __init__(self, freq, symbol, left=None, right=None):
         self.freq = freq
@@ -14,8 +16,7 @@ def printNodes(node, val=''):
         printNodes(node.right, newVal)
         # if node is edge node then
         # display its huffman code
-    if(not node.left and not node.right):
-        print(f"{node.symbol} -> {newVal}")
+    print(f"{node.symbol} -> {newVal}") if(not node.left and not node.right) else None 
 # characters for huffman tree
 chars = ['a', 'b', 'c', 'd', 'e', 'f']
 # frequency of characters

@@ -7,8 +7,8 @@ def removeDupl(arr, n):
             temp.append(arr[i])
     string=f"Size of new array: {len(temp)}"
     return sorted(temp), string
-
-
-arr=[1,1,2,2,4,5,6,21, 1, 7,100,110]
-print(removeDupl(arr, len(arr)))
+def improved(arr, n):
+    return n if n<=1 else dict()
+arr=[1,1,2,2,4,5,6,21,1,7,100,110]
+print(improved(arr, len(arr)))
 
