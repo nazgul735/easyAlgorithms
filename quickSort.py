@@ -21,9 +21,7 @@ def partition(start, end, array):
 def quick_sort(start, end, array):
      
     if (start < end):
-
         p = partition(start, end, array)
-
         quick_sort(start, p - 1, array)
         quick_sort(p + 1, end, array)
 

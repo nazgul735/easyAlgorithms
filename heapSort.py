@@ -3,10 +3,9 @@ def heapify(arr, n, i):
     l = 2 * i + 1     # left = 2*i + 1
     r = 2 * i + 2     # right = 2*i + 2
  
-    if l < n and arr[largest] < arr[l]:
+    if l<n and arr[largest] < arr[l]:
         largest = l
- 
-    if r < n and arr[largest] < arr[r]:
+    if r<n and arr[r]>arr[largest]:
         largest = r
 
     if largest != i:
@@ -24,7 +23,7 @@ def heapSort(arr):
         arr[i], arr[0] = arr[0], arr[i]  # swap
         heapify(arr, i, 0)
  
-arr = [4, 10, 3, 5, 1]
+arr = [4, 10, 3, 5, 1,20]
 heapSort(arr)
 n = len(arr)
 

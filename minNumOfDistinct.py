@@ -16,7 +16,8 @@ def distinctIds(arr, mi):
             m[arr[i]] = 1
 
 
-    
+
+   
     # Store into the list value as key and vice-versa
     for i in m:
         v.append([m[i],i]) #value=i and m[i]=key --> sort will set value first
@@ -26,8 +27,6 @@ def distinctIds(arr, mi):
 
     # Start removing elements from the beginning
     for i in range(size):
-
-
     # Remove if current value is less than
     # or equal to mi
         if (v[i][0] <= mi):
@@ -42,9 +41,9 @@ def distinctIds(arr, mi):
     
 
 # Driver code
-arr = [2, 3, 1, 2, 3, 3 ]
+arr = [2, 3, 1, 2, 3, 3, 1, 1 ]
 
-m = 3
+mi = 3
 
 # To display the result
-print(distinctIds(arr, m))
+print(distinctIds(arr, mi))
