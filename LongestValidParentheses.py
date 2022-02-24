@@ -42,7 +42,17 @@ def binSort(self, s):
         d["("]+=1 if left[i] == '(' or right[j]=='(' and right[j]!=left[i] else next
         d[")"]+=2 if left[i] == ')' and right[j]==')' else next
         d[")"]+=1 if left[i] == ')' or right[j]==')' and right[j]!=left[i] else next
-    return min(d.values())*("()")     
+    return min(d.values())*("()")   
+
+def betterBinSort(self, s): #unsure about this 
+    d={"(":0,")":0}
+    mid=len(s)//2; left=s[:mid]; right=s[mid:]
+    for i, j in zip(range(len(left)), range(len(right))):
+        d[left[i]]+=1 if (left[i], right[j]) in d else 1
+        d[right[j]]+=1 if right[j] in d else 1
+    return min(d.values())*2
+
+
 
 def patSort(self, s):
     n = len(s)
@@ -59,5 +69,7 @@ def patSort(self, s):
     return max(longest or [0]) 
 
 string="()()()"
-print(patSort(0, string))
+# print(patSort(0, string))
+
+print(betterBinSort(0, string))
 
