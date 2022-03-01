@@ -7,7 +7,7 @@ class node:
         self.left = left
         self.right = right
         # tree direction (0/1)
-        self.huff = ''
+        self.huff = ''  
 def printNodes(node, val=''):
     newVal = val + str(node.huff)
     if(node.left):
