@@ -33,7 +33,6 @@ def sortingProperly(self,s):
         r=r+1 if s[i] == ')' or s[j]==')' and s[j]!=s[i] else r
     l,r=l//2,r//2
     return int((min(l,r)))*("("+")"), len(int((min(l,r))/2)*("("+")"))*2     
-
 def binSort(self, s):
     d={"(":0,")":0}
     mid=len(s)//2; left=s[:mid]; right=s[mid:]
@@ -43,7 +42,6 @@ def binSort(self, s):
         d[")"]+=2 if left[i] == ')' and right[j]==')' else next
         d[")"]+=1 if left[i] == ')' or right[j]==')' and right[j]!=left[i] else next
     return min(d.values())*("()")   
-
 def betterBinSort(self, s): #unsure about this 
     d={"(":0,")":0}
     mid=len(s)//2; left=s[:mid]; right=s[mid:]
@@ -51,9 +49,6 @@ def betterBinSort(self, s): #unsure about this
         d[left[i]]+=1 if (left[i], right[j]) in d else 1
         d[right[j]]+=1 if right[j] in d else 1
     return min(d.values())*2
-
-
-
 def patSort(self, s):
     n = len(s)
     stack = []
