@@ -1,6 +1,3 @@
-import numpy
-
-
 class Solution:
     def maxProduct(self, nums):
         output = maxProd = minProd = nums[0]
