@@ -1,3 +1,4 @@
+#assuming only one number is missing
 class Solution:
     def missingNumber(nums) -> int:
         nums=sorted(nums)
@@ -9,9 +10,13 @@ class Solution:
             if  nums[i]!=i:
                 return i
         return None
+    def betterMissingNumber(nums)-> int:
+        total=int((len(nums))*(len(nums)+1)/2)
+        return int(total-sum(nums))
         
         
-n=[3,0,1]
+n=[3,0,1,2]
 o=Solution
-print(o.missingNumber(n))
+# print(o.missingNumber(n))
+print(o.betterMissingNumber(n))
         
