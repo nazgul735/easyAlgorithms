@@ -2,7 +2,13 @@ package leetCode_java;
 
 public class greedyStocks {
     private int[] days;
+    private int temp=0;
     public int[] greedy(int[] stocks){
+
+        for(int i=0;i<stocks.length;i++){
+            
+
+        }
         return days;
 
     }
