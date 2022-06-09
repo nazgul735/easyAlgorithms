@@ -6,7 +6,11 @@ public class greedyStocks {
     public int[] greedy(int[] stocks){
 
         for(int i=0;i<stocks.length;i++){
-            
+            for(int y=i+1;y<stocks.length;i++){
+                if(temp<stocks.get()-i){
+
+                }
+            }
 
         }
         return days;
