@@ -7,7 +7,7 @@ public class greedyStocks {
 
         for(int i=0;i<stocks.length;i++){
             for(int y=i+1;y<stocks.length;i++){
-                if(temp<stocks.get()-i){
+                if(temp<stocks.length.get(y)-i){
 
                 }
             }
