@@ -105,8 +105,18 @@ def maxSubarray(arr):
         maxi=max(currentMax, maxi)
     return maxi
 
-a=[1,2,3,-4,6,-10]
-print(maxSubarray(a))
+def param(s):
+    st=0
+    for i in s:
+        if i == "(":
+            st=st+1
+        elif i==")":
+            st=st-1
+        if st<0:
+            return False
+    return True
+
+        
         
         
 
