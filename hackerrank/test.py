@@ -116,7 +116,28 @@ def param(s):
             return False
     return True
 
+
+
+def sol(s):
+    state=0
+    par="()"
+    for i in s:
+        if i not in par:
+            continue
+        if i =="(":
+            state=state+1
+        elif i==")":
+            state=state-1
+            if state<0:
+                return False
+    if state==0:
+        return True
+    return False
         
+
+        
+
+
         
         
 
