@@ -133,8 +133,17 @@ def sol(s):
     if state==0:
         return True
     return False
-        
 
+class Node:
+   def __init__(self, dataval=None):
+      self.value = dataval
+      self.nextvalue = None
+
+class SLinkedList:
+   def __init__(self):
+      self.headvalue = None
+
+list1 = SLinkedList()
         
 
 
