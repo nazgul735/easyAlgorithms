@@ -136,6 +136,7 @@ def sol(s):
 
 class Node:
    def __init__(self, dataval=None):
+    
       self.value = dataval
       self.nextvalue = None
 
